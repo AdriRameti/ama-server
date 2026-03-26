@@ -1,0 +1,31 @@
+# ama-server — Configuración del servidor
+config.php
+
+# Datos de runtime (generados por la aplicación)
+collections.json
+images.json
+
+# Ficheros temporales de escritura atómica
+*.tmp
+
+# Directorio de uploads (contenido dinámico)
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Sesiones PHP
+sess_*
