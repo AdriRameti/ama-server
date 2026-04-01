@@ -1,0 +1,8 @@
+{
+    "name": "ama/server",
+    "description": "AMA Agullent Backend",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

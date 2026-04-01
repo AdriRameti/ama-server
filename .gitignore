@@ -1,6 +1,9 @@
 # ama-server — Configuración del servidor
 config.php
 
+# Dependencias PHP
+vendor/
+
 # Datos de runtime (generados por la aplicación)
 collections.json
 images.json
