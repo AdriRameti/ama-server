@@ -18,6 +18,5 @@ return [
     'smtp_user'      => 'TU_EMAIL_SMTP',
     'smtp_pass'      => 'TU_API_KEY_O_PASSWORD',
     'smtp_from'      => 'noreply@amagullent.org',
-    'smtp_from_name' => 'AMA Agullent',
-    'contact_to'     => 'info@amagullent.org'
+    'smtp_from_name' => 'AMA Agullent'
 ];

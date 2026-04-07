@@ -107,7 +107,7 @@ try {
     $mail->CharSet    = 'UTF-8';
 
     $mail->setFrom($cfg['smtp_from'], $cfg['smtp_from_name']);
-    $mail->addAddress($cfg['contact_to']);
+    $mail->addAddress($cfg['smtp_from']);
     $mail->addReplyTo($email, "$nombre $apellido");
 
     $mail->isHTML(true);
