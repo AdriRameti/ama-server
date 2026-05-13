@@ -75,19 +75,19 @@ $s_mensaje  = nl2br(htmlspecialchars($mensaje, ENT_QUOTES, 'UTF-8'));
 $htmlBody = <<<HTML
 <html>
 <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-    <h2 style="color: #2c3e50;">Nuevo mensaje de contacto</h2>
+    <h2 style="color: #2c3e50;">Nou missatge de contacte</h2>
     <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-        <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Nombre:</td>
+        <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Nom:</td>
             <td style="padding: 8px; border-bottom: 1px solid #eee;">{$s_nombre} {$s_apellido}</td></tr>
         <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Email:</td>
             <td style="padding: 8px; border-bottom: 1px solid #eee;"><a href="mailto:{$s_email}">{$s_email}</a></td></tr>
-        <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Teléfono:</td>
+        <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Telèfon:</td>
             <td style="padding: 8px; border-bottom: 1px solid #eee;">{$s_telefono}</td></tr>
-        <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Asunto:</td>
+        <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Assumpte:</td>
             <td style="padding: 8px; border-bottom: 1px solid #eee;">{$s_asunto}</td></tr>
     </table>
     <div style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-left: 4px solid #3498db;">
-        <strong>Mensaje:</strong><br><br>
+        <strong>Missatge:</strong><br><br>
         {$s_mensaje}
     </div>
 </body>
@@ -126,13 +126,13 @@ try {
 $confirmHtml = <<<HTML
 <html>
 <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-    <h2 style="color: #2c3e50;">Hemos recibido tu mensaje</h2>
+    <h2 style="color: #2c3e50;">Hem rebut el teu missatge</h2>
     <p>Hola {$s_nombre},</p>
-    <p>Gracias por ponerte en contacto con nosotros. Hemos recibido tu mensaje con el asunto
-       <strong>"{$s_asunto}"</strong> y te responderemos lo antes posible.</p>
+    <p>Gràcies per posar-te en contacte amb nosaltres. Hem rebut el teu missatge amb l'assumpte
+       <strong>"{$s_asunto}"</strong> i et respondrem al més prompte possible.</p>
     <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
     <p style="color: #777; font-size: 13px;">
-        Este es un mensaje automático, por favor no respondas a este correo.<br>
+        Este és un missatge automàtic, per favor no respongues a este correu.<br>
         AMA Agullent &mdash; <a href="https://www.amagullent.org">www.amagullent.org</a>
     </p>
 </body>
@@ -154,9 +154,9 @@ try {
     $confirm->addAddress($email, "$nombre $apellido");
 
     $confirm->isHTML(true);
-    $confirm->Subject = 'Hemos recibido tu mensaje — AMA Agullent';
+    $confirm->Subject = 'Hem rebut el teu missatge — AMA Agullent';
     $confirm->Body    = $confirmHtml;
-    $confirm->AltBody = "Hola $nombre,\n\nGracias por contactar con AMA Agullent. Hemos recibido tu mensaje con el asunto \"$asunto\" y te responderemos lo antes posible.\n\nAMA Agullent — www.amagullent.org";
+    $confirm->AltBody = "Hola $nombre,\n\nGràcies per posar-te en contacte amb nosaltres. Hem rebut el teu missatge amb l'assumpte \"$asunto\" i et respondrem al més prompte possible.\n\nAMA Agullent — www.amagullent.org";
 
     $confirm->send();
 } catch (Exception $e) {
